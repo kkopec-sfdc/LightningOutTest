@@ -7,7 +7,8 @@
 
   <script>
 
-    const userIdFromSurroundingPage = document.querySelector("[userId]").getAttribute("userId").value;
+    const userIdFromSurroundingPageDiv = document.querySelector("[userId]");
+    const userIdFromSurroundingPage = userIdFromSurroundingPageDiv.getAttribute("userId");
 
     const appName = 'c:OptOutFormWrapper';
     const componentName = 'c:optoutForm';
