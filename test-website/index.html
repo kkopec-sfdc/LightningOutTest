@@ -1,8 +1,7 @@
 <html>
     <h1>QIAGEN Lightning Out Test</h1>
-    <script src="https://2023-01-qiagen-da-demo.my.salesforce.com/lightning/lightning.out.js"></script>
-    <div userId="00Q6800000507vVEAQ"/>
-    <!-- <script src="https://2023-01-qiagen-da-demo.lightning.force.com/lightning/lightning.out.js"></script> -->
+    <script src="https://qiagen--cfsales.sandbox.my.salesforce.com/lightning/lightning.out.js"></script>
+    <div userId="00Q1l000008OUHaEAO"/>
     <div data-lightning-out="true"></div>
 
   <script>
@@ -10,9 +9,9 @@
     const userIdFromSurroundingPageDiv = document.querySelector("[userId]");
     const userIdFromSurroundingPage = userIdFromSurroundingPageDiv.getAttribute("userId");
 
-    const appName = 'c:OptOutFormWrapper';
-    const componentName = 'c:optoutForm';
-    const lightningEndpoint = 'https://2023-01-qiagen-da-demo.my.site.com/';
+    const appName = 'c:LightningOutAuraWrapper';
+    const componentName = 'c:mycases';
+    const lightningEndpoint = 'https://qiagen--cfsales.sandbox.my.site.com/lightningoutpoc';
     const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {
       firstName: userIdFromSurroundingPage
