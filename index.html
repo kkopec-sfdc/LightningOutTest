@@ -17,7 +17,10 @@
 
     const appName = 'c:LightningOutAuraWrapper';
     const componentName = 'c:mycases';
+
+    <!-- lightningEndpoint requires a terminal '/' character, otherwise this will not work -->
     const lightningEndpoint = 'https://qiagen--cfsales.sandbox.my.site.com/lightningoutpoc/';
+    
     const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {
       firstName: userIdFromSurroundingPage
