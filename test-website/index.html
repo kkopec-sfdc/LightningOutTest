@@ -5,42 +5,40 @@
         <meta http-equiv='pragma' content='no-cache'>
     </head>
     
-    <h1>Lightning Out POC</h1>
-    <script src="https://qiagen--cfsales.sandbox.my.salesforce.com/lightning/lightning.out.js"></script>
-    <div userId="00Q1l000008OUHaEAO"/>
-    <div data-lightning-out="true"></div>
-
-  <script>
-
-    const userIdFromSurroundingPageDiv = document.querySelector("[userId]");
-    const userIdFromSurroundingPage = userIdFromSurroundingPageDiv.getAttribute("userId");
-
-    const appName = 'c:LightningOutAuraWrapper';
-    const componentName = 'c:mycases';
-    //const lightningEndpoint = 'https://qiagen--cfsales.sandbox.my.site.com/lightningoutpoc';
-    const lightningEndpoint = 'https://qiagen--cfsales.sandbox.my.site.com/';
-    const targetElement = document.querySelector("[data-lightning-out]");
-    const componentAttributes = {
-      firstName: userIdFromSurroundingPage
-    };
-
+    <body>
     
+        <h1>Lightning Out POC</h1>
+        <script src="https://qiagen--cfsales.sandbox.my.salesforce.com/lightning/lightning.out.js"></script>
+        <div userId="00Q1l000008OUHaEAO"/>
+        <div data-lightning-out="true"></div>
 
-    $Lightning.use(
-            appName,
-            function (){
-              $Lightning.createComponent(
-                      componentName,
-                      componentAttributes,
-                      targetElement,
-                      function (cmp){
-                        console.log('lightning component created');
-                      }
-              );
-            },
-            lightningEndpoint
-    );
+        <script>
+            const userIdFromSurroundingPageDiv = document.querySelector("[userId]");
+            const userIdFromSurroundingPage = userIdFromSurroundingPageDiv.getAttribute("userId");
 
+            const appName = 'c:LightningOutAuraWrapper';
+            const componentName = 'c:mycases';
+            //const lightningEndpoint = 'https://qiagen--cfsales.sandbox.my.site.com/lightningoutpoc';
+            const lightningEndpoint = 'https://qiagen--cfsales.sandbox.my.site.com/';
+            const targetElement = document.querySelector("[data-lightning-out]");
+            const componentAttributes = {
+              firstName: userIdFromSurroundingPage
+            };
 
-  </script>
+            $Lightning.use(
+                    appName,
+                    function (){
+                      $Lightning.createComponent(
+                              componentName,
+                              componentAttributes,
+                              targetElement,
+                              function (cmp){
+                                console.log('lightning component created');
+                              }
+                      );
+                    },
+                    lightningEndpoint
+            );
+        </script>
+    </body>
 </html>
